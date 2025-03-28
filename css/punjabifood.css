@@ -136,7 +136,7 @@ li a{
 li a:hover{
     color:rgb(26, 45, 88) ;
 }
-li a::after{   
+/* li a::after{   
     content: '';
     position: absolute;
     bottom: -5px;
@@ -147,11 +147,11 @@ li a::after{
     transition: all 0.5s;
     pointer-events: none;
     
-}
+} */
 
-li a:hover::after{
+/* li a:hover::after{
     width: 70%;
-}
+} */
 
 .nav-login{
     background-color: transparent;
