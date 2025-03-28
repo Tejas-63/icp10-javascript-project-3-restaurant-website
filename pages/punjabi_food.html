@@ -8,20 +8,6 @@
     <link rel="stylesheet" href="./../css/punjabifood.css">
 </head>
 <body>
-    <!-- <div class="container">
-        <div class="nav-div">          
-                <img src="./../icons/home-page-icon/th-logo.png" class="nav-logo">
-                <ul class="nav-links">
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./pages/menu.html">MENU</a></li>
-                    <li><a href="./pages/reservation.html">RESERVATIONS</a></li>
-                    <li><a href="./pages/contact_us.html">CONTACT US</a></li>
-                    <li><a href="./pages/about_us.html">ABOUT US</a></li>
-                    <a href="./pages/login.html"><button class="nav-login">LOGIN</button></a>
-                    <a href="./pages/sign-up.html"><button class="nav-sign">SIGN UP</button></a>
-                </ul>
-        </div>
-    </div> -->
     <nav>
         <ul class="sidebar">
           <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
@@ -32,16 +18,6 @@
           <li><a href="#">Contact</a></li>
           <li><a href="#">Login</a></li>
         </ul>
-        <ul>
-          <li ><a href="#">Tasty Heaven</a></li>
-          <li class="hideOnMobile"><a href="../index.html">Home</a></li>
-          <li class="hideOnMobile"><a href="../pages/menu.html">Menu</a></li>
-          <li class="hideOnMobile"><a href="./pages/reservation.html">Reservation</a></li>
-          <li class="hideOnMobile"><a href="./pages/about_us.html">About</a></li>
-          <li class="hideOnMobile"><a href="./pages/contact_us.html">Contact</a></li>
-          <li class="hideOnMobile"><a href="./pages/login.html">Login</a></li>
-          <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
-        </ul>
     </nav>
     <hr class="line">
     <section id="menu">
@@ -50,25 +26,38 @@
             <h3 class="menu-title">Starters</h3>
             <div class="menu-items">
                 <div class="menu-item">
-                    <img src="./../images\punjabi_food\Tandoori-Paneer-Tikka-2.jpg" alt="Paneer Tikka">
+                    <img src="./../images/punjabi_food/Tandoori-Paneer-Tikka-2.jpg" alt="Paneer Tikka">
                     <h4>Paneer Tikka</h4>
-                    <a href="../pages/payment.html" >  <button onclick="addToCart('Paneer Tikka')" class="addbtn">Buy Now</button></a>
-                </div>
-                <div class="menu-item">
-                    <img src="./../images/punjabi_food/Amritsari-Kulcha.jpg" alt="Amritsari Kulcha">
-                    <h4>Amritsari Kulcha</h4>
-                    <a href="../pages/payment.html" >  <button onclick="addToCart('Amritsari Kulcha')" class="addbtn">Buy Now</button></a>
+                    <p>Price: ₹<span class="price" data-price="120">120</span></p>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity(this, 10)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="increaseQuantity(this, 10)">+</button>
+                    </div>
+                    <a href="../pages/payment.html"><button class="addbtn">Buy Now</button></a>
                 </div>
                 <div class="menu-item">
                     <img src="./../images\punjabi_food\chole-bhature.jpg" alt="Chole Bhature">
                     <h4>Chole Bhature</h4>
-                    <a href="../pages/payment.html" >   <button onclick="addToCart('Chole Bhature')" class="addbtn">Buy Now</button></a>
+                    <p>Price: ₹<span class="price" data-price="200">200</span></p>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity(this, 8)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="increaseQuantity(this, 8)">+</button>
+                    </div>
+                    <a href="../pages/payment.html"><button class="addbtn">Buy Now</button></a>
                 </div>
-                <!-- <div class="menu-item">
-                    <img src="./../images\punjabi_food\images.jpeg" alt="Aloo Gobi Paratha">
-                    <h4>Chole Bhature</h4>
-                    <button onclick="addToCart('Aloo Gobi Paratha')" class="addbtn">Add to Cart</button>
-                </div> -->
+                <div class="menu-item">
+                    <img src="./../images/punjabi_food/Amritsari-Kulcha.jpg" alt="Amritsari Kulcha">
+                    <h4>Amritsari Kulcha</h4>
+                    <p>Price: ₹<span class="price" data-price="120">150</span></p>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity(this, 10)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="increaseQuantity(this, 10)">+</button>
+                    </div>
+                    <a href="../pages/payment.html"><button class="addbtn">Buy Now</button></a>
+                </div>
             </div>
         </div>
         <div class="menu-category">
@@ -77,17 +66,36 @@
                 <div class="menu-item">
                     <img src="./../images\punjabi_food\rajma-chawal-1.jpg" alt="Rajma Chawal">
                     <h4>Rajma Chawal</h4>
-                    <a href="../pages/payment.html" >  <button onclick="addToCart('Rajma Chawal')" class="addbtn">Buy Now</button></a>
+                    <p>Price: ₹<span class="price" data-price="100">100</span></p>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity(this, 10)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="increaseQuantity(this, 10)">+</button>
+                    </div>
+                    <a href="../pages/payment.html"><button class="addbtn">Buy Now</button></a>
                 </div>
                 <div class="menu-item">
                     <img src="./../images\punjabi_food\RECIPE-NEW-IMG_Makki-ki-roti-and-sarson-ka-saag.jpg" alt="Makki di Roti & Sarson da Saag">
                     <h4>Makki di Roti & Sarson da Saag</h4>
-                    <a href="../pages/payment.html" >   <button onclick="addToCart('Makki di Roti & Sarson da Saag')" class="addbtn">Buy Now</button></a>
+                    <p>Price: ₹<span class="price" data-price="160">160</span></p>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity(this, 10)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="increaseQuantity(this, 10)">+</button>
+                    </div>
+                    <a href="../pages/payment.html"><button class="addbtn">Buy Now</button></a>
                 </div>
                 <div class="menu-item">
                     <img src="./../images\punjabi_food\dal-makhani7-500x500.webp" alt="Dal Makhni">
                     <h4>Makki di Roti & Sarson da Saag</h4>
-                <a href="../pages/payment.html" >   <button onclick="addToCart('Dal Makhni')" class="addbtn">Buy Now</button></a>
+                    <p>Price: ₹<span class="price" data-price="250">250</span></p>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity(this, 10)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="increaseQuantity(this, 10)">+</button>
+                    </div>
+                    <a href="../pages/payment.html"><button class="addbtn">Buy Now</button></a>
+                </div>
                 </div>
             </div>
         </div>
@@ -97,16 +105,34 @@
                 <div class="menu-item">
                     <img src="./../images\punjabi_food\30792f47ce9f294da614f72342152ddf.jpg" alt="Gajar Ka Halwa">
                     <h4>Gajar Ka Halwa</h4>
+                    <p>Price: ₹<span class="price" data-price="150">150</span></p>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity(this, 10)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="increaseQuantity(this, 10)">+</button>
+                    </div>
                     <a href="../pages/payment.html" >     <button onclick="addToCart('Gajar Ka Halwa')" class="addbtn">Buy Now</button></a>
                 </div>
                 <div class="menu-item">
                     <img src="./../images\punjabi_food\55368356.webp" alt="Phirni">
                     <h4>Phirni</h4>
+                    <p>Price: ₹<span class="price" data-price="125">125</span></p>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity(this, 10)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="increaseQuantity(this, 10)">+</button>
+                    </div>
                     <a href="../pages/payment.html" >   <button onclick="addToCart('Phirni')" class="addbtn">Buy Now</button></a>
                 </div>
                 <div class="menu-item">
                     <img src="./../images\punjabi_food\Baklava-Lassi-4533.webp" alt="Lassi">
                     <h4>Phirni</h4>
+                    <p>Price: ₹<span class="price" data-price="130">130</span></p>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity(this, 10)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="increaseQuantity(this, 10)">+</button>
+                    </div>
                     <a href="../pages/payment.html" >    <button onclick="addToCart('Lassi')" class="addbtn">Buy Now</button></a>
                 </div>
             </div>
@@ -117,40 +143,33 @@
             <button onclick="checkout()" class="btn">Proceed to Checkout</button>
         </div>
     </section>
+    </section>
     <footer>
-        <div class="footer-container-1">
-          <div class="footer-section about">
-            <h2>About Us</h2>
-            <p>we're passionate about serving more than just food. We're dedicated to creating unforgettable dining experiences that bring people together.</p>
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-          <div class="footer-section links">
-            <h2>Quick Links</h2>
-            <ul id="quick-links">
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="./pages/menu.html">Menu</a></li>
-              <li><a href="./pages/reservation.html">Reservation</a></li>
-              <li><a href="./pages/contact_us.html">Contact</a></li>
-              <li><a href="./pages/about_us.html">About </a></li>
-              <li><a href="./pages/faqs.html">FAQs </a></li>
-            </ul>
-          </div>
-          <div class="footer-section contact">
-            <h2>Contact Us</h2>
-            <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-            <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
-            <p>Address: 123 Street, City, Country</p>                
-          </div>
-        </div>
         <div class="footer-bottom">
           <p>2024 Your Company. All rights reserved.</p>
         </div>
     </footer>
-    <script src="./../javascript/punjabifood.js"></script>
+    <script>
+        function increaseQuantity(button, price) {
+            let quantityElement = button.previousElementSibling;
+            let quantity = parseInt(quantityElement.textContent);
+            quantity++;
+            quantityElement.textContent = quantity;
+            let priceElement = button.parentElement.previousElementSibling.querySelector(".price");
+            let basePrice = parseFloat(priceElement.getAttribute("data-price"));
+            priceElement.textContent = (quantity * basePrice).toFixed(2);
+        }
+        function decreaseQuantity(button, price) {
+            let quantityElement = button.nextElementSibling;
+            let quantity = parseInt(quantityElement.textContent);
+            if (quantity > 1) {
+                quantity--;
+                quantityElement.textContent = quantity;
+                let priceElement = button.parentElement.previousElementSibling.querySelector(".price");
+                let basePrice = parseFloat(priceElement.getAttribute("data-price"));
+                priceElement.textContent = (quantity * basePrice).toFixed(2);
+            }
+        }
+    </script>
 </body>
 </html>
