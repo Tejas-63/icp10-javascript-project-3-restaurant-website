@@ -136,7 +136,11 @@ li a{
 li a:hover{
     color:rgb(26, 45, 88) ;
 }
+<<<<<<< HEAD
 li a::after{   
+=======
+/* li a::after{   
+>>>>>>> 7108546a5bb7642917c933f297722631a7218ede
     content: '';
     position: absolute;
     bottom: -5px;
@@ -147,11 +151,19 @@ li a::after{
     transition: all 0.5s;
     pointer-events: none;
     
+<<<<<<< HEAD
 }
 
 li a:hover::after{
     width: 70%;
 }
+=======
+} */
+
+/* li a:hover::after{
+    width: 70%;
+} */
+>>>>>>> 7108546a5bb7642917c933f297722631a7218ede
 
 .nav-login{
     background-color: transparent;

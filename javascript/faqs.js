@@ -61,4 +61,17 @@ if (faqContainer) {
         faqDiv.appendChild(answer);
         faqContainer.appendChild(faqDiv);
     });
+<<<<<<< HEAD
 }
+=======
+}
+
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+  }
+  function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+  }
+>>>>>>> 7108546a5bb7642917c933f297722631a7218ede

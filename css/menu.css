@@ -26,7 +26,11 @@ body{
 
 .card{
     display: flex;
+<<<<<<< HEAD
     justify-content:start;
+=======
+    justify-content:center;
+>>>>>>> 7108546a5bb7642917c933f297722631a7218ede
     align-items: center;
     width: 80%;
     height: 500px;
@@ -34,11 +38,22 @@ body{
     overflow: hidden;
     border: 3px solid rgb(26, 45, 88);
     position: relative;
+<<<<<<< HEAD
     color: rgb(26, 45, 88);
     margin: 20px;
     flex-wrap: wrap;
 }
 
+=======
+    color: rgb(255, 255, 255);
+    margin: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+
+
+>>>>>>> 7108546a5bb7642917c933f297722631a7218ede
 .heading2{
     display: block;
     text-align: center;
@@ -54,22 +69,36 @@ body{
 } */
 
 .card-img{
+<<<<<<< HEAD
     width: 60%;
     height: 0%;
     object-fit: cover;
     border-radius: 15px;
+=======
+    object-fit: cover;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+>>>>>>> 7108546a5bb7642917c933f297722631a7218ede
 }
 
 .card-body{
     width: 100%;
     height: 100%;
     position: absolute;
+<<<<<<< HEAD
     background-color: #f0f0f0;
+=======
+>>>>>>> 7108546a5bb7642917c933f297722631a7218ede
     /* backdrop-filter: blur(5px); */
     border-radius: 15px;
     padding: 25px;
     display: flex;
+<<<<<<< HEAD
     flex-direction: row;
+=======
+    flex-direction: column;
+>>>>>>> 7108546a5bb7642917c933f297722631a7218ede
     justify-content: center;
     /* transition: 0.6s; */
 }
@@ -98,6 +127,10 @@ body{
     font-weight: 500;
     cursor: pointer;
     width: 120px;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 7108546a5bb7642917c933f297722631a7218ede
 }
 
 nav{
@@ -310,6 +343,48 @@ color: #8E2DE2;
 @media only screen and (max-width: 600px){
     .menu-container{
         flex-wrap: wrap;
+<<<<<<< HEAD
+=======
+        display: block;
+    }
+
+    .menu-icon{
+        display: block;
+
+    }
+
+    .hideOnMobile{
+        display: none;
+      }
+      .menu-button{
+        display: block;
+      }
+
+}
+
+@media only screen and (min-width: 320) and (max-width: 480) {
+    .menu-container{
+        flex-wrap: wrap;
+        display: block;
+    }
+
+    .menu-icon{
+        display: block;
+
+    }
+
+    .hideOnMobile{
+        display: none;
+      }
+      .menu-button{
+        display: block;
+      }
+}
+
+@media only screen and (max-width: 600px){
+    .menu-container{
+        flex-wrap: wrap;
+>>>>>>> 7108546a5bb7642917c933f297722631a7218ede
     }
     .menu-icon{
         display: block;
@@ -318,6 +393,12 @@ color: #8E2DE2;
 
     .sidebar{
         width: 100%;
+<<<<<<< HEAD
     }
     
 }
+=======
+      }
+    
+} 
+>>>>>>> 7108546a5bb7642917c933f297722631a7218ede

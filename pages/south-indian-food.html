@@ -108,11 +108,11 @@ li a:hover::after{
     background-color:rgb(26, 45, 88) ;
 }
 header {
-    background-color: #44d2f6;
+    background-color: #9ae3f5;
     color: white;
     text-align: center;
     padding: 20px 0;
-    height: 165px;
+    height: 180px;
 }
 .dish-chart {
     display: flex;
@@ -143,28 +143,59 @@ h1 {
     font-size: 2.6rem;
     margin: 0;
 }
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
+nav{
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+  nav ul{
+    width: 100%;
+    list-style: none;
     display: flex;
-    justify-content: center;
-    margin: 20px 0;
+    justify-content: flex-end;
+    align-items: center;
 }
-
-nav ul li {
-    margin: 0 15px;
+  nav li{
+    height: 50px;
 }
-
-nav ul li a {
+  nav a{
+    height: 100%;
+    padding: 0 30px;
     text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+  nav a:hover{
+    background-color: #f0f0f0;
+}
+  nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+  .sidebar li{
+    width: 100%;
+}
+  .sidebar a{
+    width: 100%;
+}
+  .menu-button{
+    display: none;
 }
 
-nav ul li a:hover {
-    color: #e9c46a;
-}
 
 .btn{
    width: 150px;
@@ -184,48 +215,64 @@ nav ul li a:hover {
    margin: 10px auto;
    border: solid rgb(244, 243, 243) 10px;
 }
+.nav ol{
+    background-color: #44d2f6;
+}
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="nav-div">          
-                <img src="./../icons/home-page-icon/th-logo.png" class="nav-logo">
-                <ul class="nav-links">
-                    <li><a href="./../index.html">HOME</a></li>
-                    <li><a href="./../pages/menu.html">MENU</a></li>
-                    <li><a href="./../pages/reservation.html">RESERVATIONS</a></li>
-                    <li><a href="./../pages/innovation.html">CONTACT US</a></li>
-                    <li><a href="./../pages/about_us.html">ABOUT US</a></li>
-                    <a href="./../pages/login.html"><button class="nav-login">LOGIN</button></a>
-                    <a href="./../pages/sign-up.html"><button class="nav-sign">SIGN UP</button></a>
-                </ul>
-        </div>
-    </div>
-    <hr class="line">
+    <nav>
+        <ul class="sidebar">
+          <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+          <li><a href="./../index.html">Home</a></li>
+          <li><a href="./menu.html">Menu</a></li>
+          <li><a href="./reservation.html">Reservation</a></li>
+          <li><a href="./about_us.html">About</a></li>
+          <li><a href="./contact_us.html">Contact</a></li>
+          <li><a href="./login.html">Login</a></li>
+        </ul>
+        <ul>
+          <li ><a href="./../index.html">Tasty Heaven</a></li>
+          <li class="hideOnMobile"><a href="./../index.html">Home</a></li>
+          <li class="hideOnMobile"><a href="./menu.html">Menu</a></li>
+          <li class="hideOnMobile"><a href="./reservation.html">Reservation</a></li>
+          <li class="hideOnMobile"><a href="./about_us.html">About</a></li>
+          <li class="hideOnMobile"><a href="./contact_us.html">Contact</a></li>
+          <li class="hideOnMobile"><a href="./login.html">Login</a></li>
+          <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+        </ul>
+      </nav>
+    
     <header>
-        <h1>Welcome to South Indian Food Menu</h1>
+        <h1 class="h1 title">Welcome to South Indian Food Menu</h1>
         <nav>
-            <ul>
+            <0l>
                 <li><a href="#dosa">Dosa</a></li>
                 <li><a href="#idli">Idli</a></li>
                 <li><a href="#sambar">Sambar</a></li>
                 <li><a href="#vada">Vada</a></li>
-                <li><a href="#Uttapam">Uttapam</a></li>
-                <li><a href="#Specials">SPECIALS</a></li>
-            </ul>
+                <li><a href="#uttapam">Uttapam</a></li>
+                <li><a href="#upma">Upma</a></li>
+                <li><a href="#poori">Poori</a></li>
+                <li><a href="#bonda">Bomda</a></li>
+            </ol>
         </nav>
         
     <section class="dish-chart">
         <div class="dish-card" id="dosa">
             <img src="./../images/south_food/dosa.jpeg" alt="Dosa" class="dish-image">
-        <h1>dosa</h1>
+        <h2>Dosa</h2>
             
         <p> A crispy, thin pancake made from fermented rice and lentil batter, typically served with sambar and chutney.</h3>
     </p>
     
 <h3>Price : -57%  &nbsp;&nbsp;₹ 299/-</h3>
 
-<div> <button class="btn">Order now</button>
+<div>
+    <a href="./../pages/contact_us.html">
+     <button class="btn">Order now</button>
+    </a>
 </div>
 
 
@@ -234,33 +281,42 @@ nav ul li a:hover {
 </div>
         <div class="dish-card" id="idli">
             <img src="./../images/south_food/idli.jpeg" alt="Idli" class="dish-image">
-            <h3>Idli</h3>
+            <h2>Idli</h2>
             <p>Idli is a steamed rice cake made from fermented rice and urad dal batter. It is typically served with chutney and sambar.</p>
             <h3>Price : -57%  &nbsp;&nbsp;₹ 99/-</h3>
 
-            <div> <button class="btn">Order now</button>
+            <div>
+                <a href="./../pages/contact_us.html">
+                 <button class="btn">Order now</button>
+                 </a>
             </div>
         </div>
 
 
         <div class="dish-card" id="sambar">
             <img src="./../images/south_food/sambhar.jpeg" alt="Sambar" class="dish-image">
-            <h3>Sambar</h3>
+            <h2>Sambar</h2>
             <p>Sambar is a flavorful lentil soup made with vegetables, tamarind, and a blend of spices. It's usually served with rice, idli, or dosa.</p>
             <h3>Price : -57%  &nbsp;&nbsp;₹ 199/-</h3>
 
-            <div> <button class="btn">Order now</button>
+            <div> 
+                <a href="./../pages/contact_us.html">
+                <button class="btn">Order now</button>
+                </a>
             </div>
         </div>
 
 
         <div class="dish-card" id="vada">
             <img src="./../images/south_food/vada.jpeg" alt="Vada" class="dish-image">
-            <h3>Vada</h3>
+            <H2>Vada</H2>
             <p>Vada is a savory, fried doughnut-shaped snack made from urad dal and spices. It's crispy on the outside and soft on the inside.</p>
             <h3>Price : -57%  &nbsp;&nbsp;₹ 199/-</h3>
 
-            <div> <button class="btn">Order now</button>
+            <div>
+                <a href="./../pages/contact_us.html">
+
+             <button class="btn">Order now</button></a>
             </div>
         </div>
 
@@ -268,43 +324,52 @@ nav ul li a:hover {
     </section>
     <section class="dish-chart">
 
-        <div class="dish-card" id="dosa">
+        <div class="dish-card" id="uttapam">
             <img src="./../images/south_food/uttapam.jpeg" alt="Dosa" class="dish-image">
-            <h3>Uttapam</h3>
+            <h2>Uttapam</h2>
             <p>Uttapam is a thick pancake made from fermented rice and urad dal batter, often topped with vegetables like onions, tomatoes, and chilies.</p>
             <h3>Price : -57%  &nbsp;&nbsp;₹ 109/-</h3>
 
-            <div> <button class="btn">Order now</button>
+            <div> 
+                <a href="./../pages/contact_us.html">
+                <button class="btn">Order now</button></a>
             </div>
         </div>
 
-        <div class="dish-card" id="idli">
+        <div class="dish-card" id="upma">
             <img src="./../images/south_food/upma.jpeg" alt="Idli" class="dish-image">
-            <h3>Upma</h3>
+            <h2>Upma</h2>
             <p>Upma is a savory dish made from semolina (rava), cooked with vegetables and seasoned with mustard seeds, curry leaves, and spices.</p>
             <h3>Price : -57%  &nbsp;&nbsp;₹ 189/-</h3>
 
-            <div> <button class="btn">Order now</button>
+            <div> 
+                <a href="./../pages/contact_us.html">
+                <button class="btn">Order now</button></a>
             </div>
         </div>
 
-        <div class="dish-card" id="sambar">
+        <div class="dish-card" id="poori">
             <img src="./../images/south_food/poori.jpeg" alt="Sambar" class="dish-image">
-            <h3>Poori</h3>
+            <h2>Poori</h2>
             <p>Poori is a deep-fried bread made from wheat flour dough. It's typically served with curry, potatoes, or chutney.</p>
             <h3>Price : -57%  &nbsp;&nbsp;₹ 200/-</h3>
 
-            <div> <button class="btn">Order now</button>
+            <div> 
+                <a href="./../pages/contact_us.html">
+                <button class="btn">Order now</button>
+                </a>
             </div>
         </div>
 
-        <div class="dish-card" id="vada">
+        <div class="dish-card" id="bonda">
             <img src="./../images/south_food/bonda.jpeg" alt="Vada" class="dish-image">
-            <h3>Bonda</h3>
+            <h2>Bonda</h2>
             <p>Bonda is a fried snack made from mashed potatoes or lentils, spiced and deep-fried into a round shape, often served with chutneys.</p>
             <h3>Price : -57%  &nbsp;&nbsp;₹ 80/-</h3>
 
-            <div> <button class="btn">Order now</button>
+            <div> 
+                <a href="./../pages/contact_us.html">
+                <button class="btn">Order now</button></a>
             </div>
         </div>
 
