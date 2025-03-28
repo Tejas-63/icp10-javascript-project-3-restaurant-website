@@ -133,7 +133,7 @@ li a{
     overflow: hidden;
 }
 
-li a:hover{
+/* li a:hover{
     color:rgb(26, 45, 88) ;
 }
 li a::after{   
@@ -147,7 +147,7 @@ li a::after{
     transition: all 0.5s;
     pointer-events: none;
     
-}
+} */
 
 li a:hover::after{
     width: 70%;
