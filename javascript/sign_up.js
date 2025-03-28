@@ -23,6 +23,5 @@ function validateForm() {
 
     // If all validations pass, form submission will proceed
     alert("Registration successful!");
-    return  true;
-    window.location.href ="./index.html";
+    window.location.href = "./../index.html" ; 
 }
