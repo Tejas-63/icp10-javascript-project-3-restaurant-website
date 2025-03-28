@@ -346,6 +346,16 @@ color: #8E2DE2;
     margin-left: 50px;
 } */
 
+.heading{
+    background-color: #ffa366;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 70px;
+}
+
+
+
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
     .menu-container{
@@ -353,6 +363,7 @@ color: #8E2DE2;
         display: block;
     }
 
+    
     .menu-icon{
         display: block;
 
