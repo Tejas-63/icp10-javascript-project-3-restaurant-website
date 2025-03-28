@@ -175,12 +175,38 @@
             document.getElementById('orderNowBtn').style.display = method === 'cod' ? 'block' : 'none';
         }
         function processPayment() {
-            alert('Payment Successful!');
+        let method = document.getElementById('payNowBtn').getAttribute('data-method');
+        let valid = false;
+        
+        if (method === 'card') {
+            let cardNumber = document.getElementById('cardNumber').value.trim();
+            let expiry = document.getElementById('expiry').value.trim();
+            let cvv = document.getElementById('cvv').value.trim();
+            if (cardNumber.length === 19 && expiry.length === 5 && cvv.length === 3) {
+                valid = true;
+            }
+        } else if (method === 'upi') {
+            let upiId = document.getElementById('upiId').value.trim();
+            if (upiId.includes('@')) {
+                valid = true;
+            }
+        } else if (method === 'netbanking') {
+            let bank = document.getElementById('bank').value;
+            if (bank) {
+                valid = true;
+            }
+        }
 
+        if (valid) {
+            alert('Payment Successful!');
+        } else {
+            alert('Please enter valid payment details.');
         }
-        function orderconfirm(){
-            alert('Order is confirmed!');
-        }
+    }
+
+    function orderconfirm() {
+        alert('Order is confirmed!');
+    }
     </script>
 
 <footer style="width: 100%;">
