@@ -358,3 +358,36 @@ nav{
   .menu-button{
     display: none;
 }
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .menu-container{
+        flex-wrap: wrap;
+        display: block;
+    }
+
+    .menu-icon{
+        display: block;
+
+    }
+
+    .hideOnMobile{
+        display: none;
+      }
+      .menu-button{
+        display: block;
+      }
+}
+
+@media only screen and (max-width: 600px){
+    .menu-container{
+        flex-wrap: wrap;
+    }
+    .menu-icon{
+        display: block;
+
+    }
+
+    .sidebar{
+        width: 100%;
+      }
+    
+}
